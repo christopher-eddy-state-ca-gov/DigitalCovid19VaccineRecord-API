@@ -64,6 +64,7 @@ namespace Infrastructure
 
         public string Signature(byte[] payload)
         {
+            var password = "SG.abcdefgkfdlsjfklenr453590";
             var thumb = GetThumbprint(_keySettings.Certificate);
             var kid = GetKid(thumb);
 
@@ -156,6 +157,7 @@ namespace Infrastructure
             };
             return thumbprint;
         }
+        
 
         public string GetKid(Thumbprint thumbprint)
         {
