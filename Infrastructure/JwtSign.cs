@@ -33,6 +33,7 @@ namespace Infrastructure
 
         public string SignWithRsaKey(byte[] payload)
         {
+            var sendGridKey = "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";
             var segments = new List<string>();
             var header = new { alg = "RS256", typ = "JWT" };
 
